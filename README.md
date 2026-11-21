@@ -35,21 +35,29 @@ Run Thinking Machines Lab's 26.4B looped MoE model (**Inkling-2-Mini**, 48 logic
 
 ---
 
-## Quickstart
+## Quickstart (One-Command Install)
 
 ```bash
-# 1. Clone this repo and oMLX (for the inkling2_loop loader)
 git clone https://github.com/aminems/inkling-1m-mlx.git
 cd inkling-1m-mlx
-git clone --depth 1 https://github.com/jundot/omlx.git
+./install.sh
+```
 
-# 2. Install dependencies (Apple Silicon, Python >= 3.11)
-python3 -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+`install.sh` checks Apple Silicon + Python ≥ 3.11, creates `.venv`, installs MLX + server dependencies, clones `jundot/omlx`, and downloads `mlx-community/Inkling-2-Mini-oQ4e-mtp` (~16.9 GB, resumes automatically if cached). *(Pass `SKIP_DOWNLOAD=1 ./install.sh` if you already have the weights.)*
 
-# 3. Chat interactively with 1M context in < 20 GiB!
-OMLX_PATH=./omlx python chat.py --kv lm2_srft --max-ctx 1048576
+### Use with OpenCode (or any OpenAI-Compatible Client)
+
+1. Start the local OpenAI-compatible server (supports SSE streaming, automatic KV prefix-cache reuse, reasoning, and tool calls):
+   ```bash
+   ./run_server.sh                       # 256K ctx, 2.06-bit SRFT KV, port 8080
+   ./run_server.sh --max-ctx 1048576     # Full 1M ctx in ~19.5 GiB on 32 GB Mac!
+   ```
+2. Copy [`opencode.json.example`](opencode.json.example) to `opencode.json` in your project (or `~/.config/opencode/opencode.json`), launch `opencode`, and select **`Inkling-2-Mini (2-bit SRFT, 1M ctx)`** via `/models`.
+
+### Interactive Terminal Chat
+
+```bash
+OMLX_PATH=./omlx .venv/bin/python chat.py --kv lm2_srft --max-ctx 1048576
 ```
 
 ## Citation

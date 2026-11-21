@@ -1,0 +1,22 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "inkling-local": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Inkling-2-Mini (1M SRFT)",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1",
+        "apiKey": "local"
+      },
+      "models": {
+        "inkling-2-mini-1m": {
+          "name": "Inkling-2-Mini (2-bit SRFT, 1M ctx)",
+          "limit": {
+            "context": 1048576,
+            "output": 16384
+          }
+        }
+      }
+    }
+  }
+}
