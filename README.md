@@ -1,6 +1,6 @@
 # inkling-1m-mlx
 
-**One Million Tokens in 20 GB: Calibration-Free 2-Bit SRFT KV-Cache Compression for Looped MoE Inference on Apple Silicon**
+**Serving a 1M-Token Context Window in 20 GB: Calibration-Free 2-Bit SRFT KV Compression on Apple Silicon**
 
 Run Thinking Machines Lab's 26.4B looped MoE model (**Inkling-2-Mini**, 48 logical visits, 1M native context) at its **full 1,048,576-token context window in 19.49 GiB at 9.52 tok/s** on a **32 GB Apple M6 Mac mini**.
 
@@ -64,7 +64,7 @@ OMLX_PATH=./omlx .venv/bin/python chat.py --kv lm2_srft --max-ctx 1048576
 
 ```bibtex
 @misc{bergach2026inkling1m,
-  title  = {One Million Tokens in 20\,GB: Calibration-Free 2-Bit SRFT KV-Cache Compression for Looped MoE Inference on Apple Silicon},
+  title  = {Serving a 1M-Token Context Window in 20\,GB: Calibration-Free 2-Bit SRFT KV Compression on Apple Silicon},
   author = {Bergach, Mohamed Amine},
   year   = {2026},
   howpublished = {\url{https://github.com/aminems/inkling-1m-mlx}}
