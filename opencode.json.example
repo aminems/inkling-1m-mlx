@@ -11,6 +11,8 @@
       "models": {
         "inkling-2-mini-1m": {
           "name": "Inkling-2-Mini (2-bit SRFT, 1M ctx)",
+          "tool_call": true,
+          "reasoning": true,
           "limit": {
             "context": 1048576,
             "output": 16384
