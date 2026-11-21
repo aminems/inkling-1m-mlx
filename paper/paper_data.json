@@ -1,0 +1,126 @@
+{
+  "model": "mlx-community/Inkling-2-Mini-oQ4e-mtp",
+  "wt2_4x4k": [
+    {
+      "name": "bf16",
+      "eff_bits": 16.0,
+      "ppl": 6.7489,
+      "dppl": 0.0,
+      "dnll": 0.0
+    },
+    {
+      "name": "SRFT lm4",
+      "eff_bits": 4.0625,
+      "ppl": 6.7428,
+      "dppl": -0.0061,
+      "dnll": -0.0009
+    },
+    {
+      "name": "SRFT lm3",
+      "eff_bits": 3.0625,
+      "ppl": 6.7418,
+      "dppl": -0.0071,
+      "dnll": -0.00106
+    },
+    {
+      "name": "SRFT K3/V2",
+      "eff_bits": 2.5625,
+      "ppl": 6.7725,
+      "dppl": 0.0236,
+      "dnll": 0.0035
+    },
+    {
+      "name": "SRFT lm2",
+      "eff_bits": 2.0625,
+      "ppl": 6.8785,
+      "dppl": 0.1296,
+      "dnll": 0.01903
+    }
+  ],
+  "niah": [
+    {
+      "ctx": 8192,
+      "name": "bf16",
+      "passkey": "7394821",
+      "hit": true,
+      "answer": "7394821. Remember 7394821.   ,"
+    },
+    {
+      "ctx": 8192,
+      "name": "SRFT lm3",
+      "passkey": "7394821",
+      "hit": true,
+      "answer": "7394821.   , 1862 , \" is found"
+    },
+    {
+      "ctx": 8192,
+      "name": "SRFT K3/V2",
+      "passkey": "7394821",
+      "hit": true,
+      "answer": "7394821.   , 1862 , \" is found"
+    },
+    {
+      "ctx": 8192,
+      "name": "SRFT lm2",
+      "passkey": "7394821",
+      "hit": true,
+      "answer": "7394821.  Question: What is the name of "
+    },
+    {
+      "ctx": 16384,
+      "name": "bf16",
+      "passkey": "5829104",
+      "hit": true,
+      "answer": "5829104. Remember 5829104.   than smalle"
+    },
+    {
+      "ctx": 16384,
+      "name": "SRFT lm3",
+      "passkey": "5829104",
+      "hit": true,
+      "answer": "5829104. Remember 5829104.   than smalle"
+    },
+    {
+      "ctx": 16384,
+      "name": "SRFT K3/V2",
+      "passkey": "5829104",
+      "hit": true,
+      "answer": "5829104.   . The plain maskray is vivip"
+    },
+    {
+      "ctx": 16384,
+      "name": "SRFT lm2",
+      "passkey": "5829104",
+      "hit": true,
+      "answer": "5829104. The secret vault passkey is"
+    },
+    {
+      "ctx": 32768,
+      "name": "bf16",
+      "passkey": "9146372",
+      "hit": true,
+      "answer": "9146372. Remember 9146372.   = ="
+    },
+    {
+      "ctx": 32768,
+      "name": "SRFT lm3",
+      "passkey": "9146372",
+      "hit": true,
+      "answer": "9146372. Remember 9146372.   = ="
+    },
+    {
+      "ctx": 32768,
+      "name": "SRFT K3/V2",
+      "passkey": "9146372",
+      "hit": true,
+      "answer": "9146372.   = = Filmography = ="
+    },
+    {
+      "ctx": 32768,
+      "name": "SRFT lm2",
+      "passkey": "9146372",
+      "hit": true,
+      "answer": "9146372. Question: What is the name of t"
+    }
+  ]
+}
